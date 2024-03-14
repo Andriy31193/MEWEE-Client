@@ -1,11 +1,11 @@
 import Model from '../entities/models/base/Model.ts'
-import Validation from '../utils/validation/Validator.js';
+import Validator from '../utils/validation/Validator.js';
 
 abstract class Controller  {
     
     protected abstract model: Model;
     protected abstract endpoint: string;
-    protected validator: Validation;
+    protected validator: Validator;
     
     
     abstract getModel() : Object;
@@ -14,7 +14,7 @@ abstract class Controller  {
     {
         this.model.set(_model);
     }
-    public getValidator() : Validation
+    public getValidator() : Validator
     {
         return this.validator;
     }
